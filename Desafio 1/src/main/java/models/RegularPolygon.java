@@ -1,13 +1,24 @@
 package main.java.models;
 
-public abstract class RegularPolygon {
+import java.io.Serializable;
 
-    private double sizeSide = 0;
+public abstract class RegularPolygon implements Serializable {
+
+    private int id = 0;
+    private double sizeSide;
     private double area = 0;
 
     public RegularPolygon(double sizeSide)
     {
         this.sizeSide = sizeSide;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public double getSizeSide() {

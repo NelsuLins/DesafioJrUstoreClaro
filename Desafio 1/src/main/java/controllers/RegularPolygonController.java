@@ -85,7 +85,7 @@ public class RegularPolygonController {
             }
             catch (NumberFormatException e)
             {
-                System.out.println("Valor Invalido! Informe um valor:");
+                System.out.println("Valor Invalido! Informe um numero:");
                 validValue = false;
                 auxSizeSide = -1;
             }
@@ -190,7 +190,7 @@ public class RegularPolygonController {
             auxTotalArea += aux.getArea();
         }
 
-        System.out.println("\nÁrea total " + auxTotalArea + " cm²");
+        System.out.println("\nÁrea total " + String.format("%.2f",auxTotalArea) + " cm²");
         System.out.println("--------------------------------");
 
     }

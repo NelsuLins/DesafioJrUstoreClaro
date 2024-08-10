@@ -9,7 +9,7 @@ public class Square extends RegularPolygon {
     @Override
     public void setArea(double sizeSide) {
 
-        double aux = Math.pow(2, sizeSide);
+        double aux = Math.pow(sizeSide, 2);
 
         super.setArea(aux);
     }

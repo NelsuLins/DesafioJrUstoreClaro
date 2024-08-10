@@ -9,13 +9,14 @@ public class Triangle extends RegularPolygon {
     @Override
     public void setArea(double sizeSide) {
 
-        double aux = (Math.pow(2, sizeSide) * Math.sqrt(3))/4;
+        double aux = (Math.pow(sizeSide, 2) * Math.sqrt(3))/4;
 
         super.setArea(aux);
     }
 
     @Override
-    public String toString() {
-        return "Triângulo de lado " + getSizeSide() +" cm e área " + getArea() + " cm²";
+    public String toString()
+    {
+        return "Triângulo de lado " + getSizeSide() +" cm e área " + String.format("%.2f",getArea()) + " cm²";
     }
 }
