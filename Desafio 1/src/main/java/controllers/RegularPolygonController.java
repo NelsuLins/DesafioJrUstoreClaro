@@ -183,6 +183,7 @@ public class RegularPolygonController {
     public void totalAreas()
     {
         double auxTotalArea = 0;
+
         System.out.println("--------------------------------");
 
         for (RegularPolygon aux : regularPolygons) {
