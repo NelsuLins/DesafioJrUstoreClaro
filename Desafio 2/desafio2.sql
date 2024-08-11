@@ -53,13 +53,13 @@ insert into salary values
 ('19', '4500.20', '2024-04-25', '4'),
 ('20', '4670.20', '2024-04-25', '5');
 
-select e.`id`, e.`name`, sum(s.`value`)/3 as `average_salary`
+select e.`id`, e.`name`, avg(s.`value`) as `average_salary`
 from employee as e join salary as s
 on e.`id` = s.`employee_id`
-where s.`payment_date` <= (CURRENT_DATE - 90)
+where datediff(current_date, s.`payment_date`) < 92
 group by e.`id`
 order by `average_salary` desc
-limit 3
+limit 3;
 
 
 

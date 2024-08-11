@@ -12,7 +12,7 @@ public class DatabaseTest {
                     ("select e.`id`, e.`name`, avg(s.`value`) as `average_salary`\n" +
                             "from employee as e join salary as s\n" +
                             "on e.`id` = s.`employee_id`\n" +
-                            "where datediff('2024-08-24', s.`payment_date`) < 92\n" +
+                            "where datediff(current_date, s.`payment_date`) < 92\n" +
                             "group by e.`id`\n" +
                             "order by `average_salary` desc\n" +
                             "limit 3;");
