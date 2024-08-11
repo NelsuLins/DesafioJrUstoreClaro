@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class MyJDBC {
+public class DatabaseTest {
     public static void main(String[] args) {
         Connection connection = null;
         int period = 4;
